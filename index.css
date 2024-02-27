@@ -1,0 +1,381 @@
+:root {
+  --primary: hsl(125, 15%, 45%);
+  --secondary: hsl(125, 32%, 86%);
+  --neutral: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* common styling starts here */
+h1 {
+  font-size: 6rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.page {
+  padding-inline: 6rem 2rem;
+}
+
+.page p {
+  color: var(--primary);
+}
+
+.filter {
+  display: flex;
+  gap: 1rem;
+}
+
+input {
+  width: 20rem;
+  background: var(--secondary);
+  border-radius: 1rem;
+  color: var(--primary);
+}
+
+input[type="submit"] {
+  width: min-content;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+button,
+input {
+  padding: 0.7rem 1.2rem;
+  outline: none;
+  border: transparent;
+  border-radius: 1rem;
+  transition: 0.2s;
+}
+
+button:not(table button):hover {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.filter button {
+  background: transparent;
+  border-radius: 50vmax;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter button:hover {
+  color: var(--primary);
+  background: none;
+}
+
+.filter button.active {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+/* Student list styling starts here */
+table {
+  /* width: 100%; */
+  border-collapse: collapse;
+}
+.studentList {
+  width: 100%;
+}
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.studentList td:nth-child(1) {
+  width: 60px;
+  text-align: center;
+}
+
+.studentList tr *:nth-child(3),
+.studentList tr *:nth-child(4),
+.studentList tr *:nth-child(5),
+.studentList tr *:nth-child(6) {
+  max-width: 100px;
+}
+
+.studentList td:nth-child(2) a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.studentList td:nth-child(2) img {
+  height: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+th a {
+  text-decoration: underline;
+}
+
+td button {
+  padding: 0;
+  background: transparent;
+}
+
+td button img {
+  width: 2rem;
+}
+/* Student list styling ends here */
+
+#currentUser {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+
+#currentUser a {
+  text-decoration: underline;
+}
+/* common styling ends here */
+
+/* header styling starts here */
+header {
+  height: 100vh;
+  position: fixed;
+
+  padding: 1rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: start;
+
+  width: 4rem;
+  transition: 0.2s;
+  overflow: hidden;
+}
+header:hover {
+  width: 14rem;
+}
+header:hover + section {
+  padding-left: 16rem;
+}
+
+section {
+  transition: 0.2s;
+}
+
+#logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--secondary);
+}
+
+#logo img {
+  height: 2rem;
+}
+
+#tools {
+  display: grid;
+  gap: 2rem;
+}
+
+#tools a {
+  display: flex;
+  gap: 1rem;
+  color: var(--secondary);
+}
+
+#tools img {
+  height: 2rem;
+  filter: invert(1) sepia(0.5) saturate(5) hue-rotate(50deg);
+}
+/* header styling ends here */
+
+/* login page styling starts here */
+#login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#login::before {
+  content: "";
+  background: url("Assets/Logo/icon-d.svg") no-repeat center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.05;
+}
+
+#login > * {
+  z-index: 10;
+}
+
+#login form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+#login input[type="submit"] {
+  width: auto;
+}
+
+#login a {
+  text-decoration: underline;
+}
+
+#login p {
+  font-size: 0.75rem;
+}
+/* login page styling ends here */
+
+/* Overview page styling starts here */
+#overview table tr * {
+  width: 200px;
+  text-align: left;
+}
+/* Overview page styling ends here */
+
+/* attendance page styling ends here */
+.date-n-link {
+  display: flex;
+  justify-content: space-between;
+}
+/* attendance page styling ends here */
+
+/* past attendances page styling ends here */
+#past-attendances input {
+  margin-right: 1rem;
+}
+/* past attendances page styling ends here */
+
+/* students page styling ends here */
+#students > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#students > div:nth-child(1) button {
+  height: min-content;
+}
+/* students page styling ends here */
+
+/* profile page styling ends here */
+#profile > div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+#profile > div > div:nth-child(1) {
+  height: min-content;
+  display: grid;
+  justify-items: center;
+}
+
+#profile img {
+  width: 25vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#profile table:nth-child(2) tr:nth-child(1) {
+  width: 10rem;
+}
+
+#profile table:nth-child(2) tr {
+  display: table-cell;
+}
+
+#profile table:nth-child(2) tr th {
+  display: block;
+}
+
+#profile table:nth-child(2) tr td {
+  display: block;
+}
+#profile table:nth-child(5) * {
+  width: auto;
+}
+
+#profile table:nth-child(5) tr th:nth-child(1) {
+  text-align: center;
+}
+
+span {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+span i {
+  color: var(--primary);
+  font-size: 3rem;
+  transition: 0.2s;
+}
+span button:hover * {
+  color: rgb(237, 237, 237);
+}
+
+.atnx-status {
+  background: lightgray;
+  border-radius: 0.3rem;
+  height: 2rem;
+  aspect-ratio: 1;
+}
+
+.atnx-status.present {
+  background: var(--primary);
+}
+/* profile page styling ends here */
+
+/* editProfile page styling starts here */
+
+#deatilsForm {
+  display: grid;
+  gap: 1rem;
+}
+
+#deatilsForm div {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  align-items: center;
+}
+
+input::-webkit-file-upload-button {
+  background: none;
+  border: 0.1px solid var(--primary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+/* editProfile page styling ends here */

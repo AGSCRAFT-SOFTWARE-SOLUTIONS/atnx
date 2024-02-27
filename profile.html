@@ -1,0 +1,152 @@
+<!-- Project: atnx
+Start: 20-09-2023
+End: - -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>atnx</title>
+    <link
+      rel="shortcut icon"
+      href="Assets/Logo/icon-d.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="Assets/Logo/icon-l.svg"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/7ae938555b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="currentUser">
+      <p>Name</p>
+      <button>Log Out</button>
+    </div>
+    <header>
+      <a href="/" id="logo">
+        <img src="Assets/Logo/icon-l.svg" alt="logo" />
+        <h3>AGSCRAFT</h3>
+      </a>
+      <div id="tools">
+        <a href="overview.html"
+          ><img src="Assets/Icons/pie-chart.png" alt="Overview" />
+          <p>Overview</p></a
+        >
+        <a href="attendance.html"
+          ><img src="Assets/Icons/calendar.png" alt="Attendance" />
+          <p>Attendance</p></a
+        >
+        <a href="students.html"
+          ><img src="Assets/Icons/user.png" alt="Students" />
+          <p>Students</p></a
+        >
+      </div>
+    </header>
+    <section id="profile" class="page centered-contents">
+      <span>
+        <button>
+          <i class="fa-solid fa-arrow-left" onclick="history.back();"></i>
+        </button>
+        <h1>Profile</h1>
+      </span>
+      <div>
+        <div>
+          <img src="Assets/Illustrations/Default_pfp.svg.png" alt="profile" />
+          <h2>Maria Anders</h2>
+          <p>Java</p>
+          <br /><a href="addOrEditProfile.html">
+            <button>Edit Profile</button></a
+          >
+        </div>
+        <div>
+          <h3>Details</h3>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Reg. no</th>
+              <th>Course</th>
+              <th>Joined</th>
+              <th>Completion</th>
+              <th>Paid</th>
+              <th>Paid on</th>
+              <th>Balance</th>
+              <th>Address</th>
+              <th>Phone</th>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td>Reg. no</td>
+              <td>Course</td>
+              <td>Joined</td>
+              <td>Completion</td>
+              <td>Paid</td>
+              <td>54/85/50566, 54/68/3555</td>
+              <td>Balance</td>
+              <td>Address</td>
+              <td>Phone</td>
+            </tr>
+          </table>
+          <br />
+          <table>
+            <h3>Attendance</h3>
+            <tr>
+              <th>Week</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><div class="atnx-status present"></div></td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status present"></div></td>
+              <td><div class="atnx-status"></div></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status present"></div></td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status present"></div></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status present"></div></td>
+              <td><div class="atnx-status present"></div></td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status"></div></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><div class="atnx-status present"></div></td>
+              <td><div class="atnx-status present"></div></td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status"></div></td>
+              <td><div class="atnx-status"></div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

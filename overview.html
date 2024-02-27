@@ -1,0 +1,125 @@
+<!-- Project: atnx
+Start: 20-09-2023
+End: - -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>atnx</title>
+    <link
+      rel="shortcut icon"
+      href="Assets/Logo/icon-d.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="Assets/Logo/icon-l.svg"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="currentUser">
+      <p>Name</p>
+      <button>Log Out</button>
+    </div>
+
+    <header>
+      <a href="/" id="logo">
+        <img src="Assets/Logo/icon-l.svg" alt="logo" />
+        <h3>AGSCRAFT</h3>
+      </a>
+      <div id="tools">
+        <a href="overview.html"
+          ><img src="Assets/Icons/pie-chart.png" alt="Overview" />
+          <p>Overview</p></a
+        >
+        <a href="attendance.html"
+          ><img src="Assets/Icons/calendar.png" alt="Attendance" />
+          <p>Attendance</p></a
+        >
+        <a href="students.html"
+          ><img src="Assets/Icons/user.png" alt="Students" />
+          <p>Students</p></a
+        >
+      </div>
+    </header>
+    <section id="overview" class="page">
+      <h1>Overview</h1>
+      <table border="">
+        <h3>Total students</h3>
+        <tr>
+          <th>All</th>
+          <th>Programming</th>
+          <th>Web development</th>
+          <th>Non technical</th>
+        </tr>
+        <tr>
+          <td>65</td>
+          <td>43</td>
+          <td>4</td>
+          <td>2</td>
+        </tr>
+      </table>
+      <br />
+      <table border="">
+        <h3>Programming</h3>
+        <tr>
+          <th>All</th>
+          <th><a href="students.html">C</a></th>
+          <th><a href="students.html">C++</a></th>
+          <th><a href="students.html">Java</a></th>
+          <th><a href="students.html">Python</a></th>
+        </tr>
+        <tr>
+          <td>65</td>
+          <td>43</td>
+          <td>4</td>
+          <td>2</td>
+          <td>9</td>
+        </tr>
+      </table>
+      <br />
+      <table border="">
+        <h3>Web development</h3>
+        <tr>
+          <th>All</th>
+          <th><a href="students.html">Frontend</a></th>
+          <th><a href="students.html">Full-stack</a></th>
+        </tr>
+        <tr>
+          <td>65</td>
+          <td>43</td>
+          <td>4</td>
+        </tr>
+      </table>
+      <br />
+      <table border="">
+        <h3>Non technical</h3>
+        <tr>
+          <th>All</th>
+          <th><a href="students.html">MS Office</a></th>
+          <th><a href="students.html">Aptitude</a></th>
+          <th><a href="students.html">Soft skill</a></th>
+        </tr>
+        <tr>
+          <td>65</td>
+          <td>43</td>
+          <td>4</td>
+          <td>2</td>
+        </tr>
+      </table>
+      <br />
+    </section>
+  </body>
+</html>

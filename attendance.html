@@ -1,0 +1,535 @@
+<!-- Project: atnx
+Start: 20-09-2023
+End: - -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>atnx</title>
+    <link
+      rel="shortcut icon"
+      href="Assets/Logo/icon-d.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="Assets/Logo/icon-l.svg"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="currentUser">
+      <p>Name</p>
+      <button>Log Out</button>
+    </div>
+    <header>
+      <a href="/" id="logo">
+        <img src="Assets/Logo/icon-l.svg" alt="logo" />
+        <h3>AGSCRAFT</h3>
+      </a>
+      <div id="tools">
+        <a href="overview.html"
+          ><img src="Assets/Icons/pie-chart.png" alt="Overview" />
+          <p>Overview</p></a
+        >
+        <a href="attendance.html"
+          ><img src="Assets/Icons/calendar.png" alt="Attendance" />
+          <p>Attendance</p></a
+        >
+        <a href="students.html"
+          ><img src="Assets/Icons/user.png" alt="Students" />
+          <p>Students</p></a
+        >
+      </div>
+    </header>
+    <section id="attendance" class="page">
+      <h1>Attendance</h1>
+      <div class="date-n-link">
+        <p>Wednesday, 22/09/2023</p>
+        <a href="pastAttenddance.html"><button>View past records</button></a>
+      </div>
+      <br />
+      <div class="filter">
+        <button class="active" onclick="filterBy(event)">All</button>
+        <button onclick="filterBy(event)">C</button>
+        <button onclick="filterBy(event)">C++</button>
+        <button onclick="filterBy(event)">Java</button>
+        <button onclick="filterBy(event)">Python</button>
+        <button onclick="filterBy(event)">Front-end</button>
+        <button onclick="filterBy(event)">Full-stack</button>
+        <button onclick="filterBy(event)">Non-technical</button>
+      </div>
+      <br />
+      <table class="studentList">
+        <tr>
+          <th>S. no</th>
+          <th>Student</th>
+          <th>Reg. no</th>
+          <th>Course</th>
+          <th>Attendance</th>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>
+            <a href="profile.html"
+              ><img
+                src="Assets/Illustrations/Default_pfp.svg.png"
+                alt=""
+                srcset=""
+              />
+              Maria Anders</a
+            >
+          </td>
+          <td>1234567890</td>
+          <td>Java</td>
+          <td>
+            <button
+              data-status="false"
+              data-id="123"
+              onclick="toggleAttendance(this)"
+              id="test"
+            >
+              <img src="Assets/Illustrations/delete-button.png" alt="nope" />
+              <img
+                src="Assets/Illustrations/check.png"
+                alt="yep"
+                style="display: none"
+              />
+            </button>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
